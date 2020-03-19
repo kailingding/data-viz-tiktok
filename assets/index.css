@@ -236,10 +236,12 @@ p {
   margin: 0;
   padding: 0;
   list-style: none;
+  width: 100%;
 }
 
 .main .trending ul li {
-  /*display: inline-block;*/
+  display: inline-block;
+  width: 33%;
 }
 
 /** Footer Section **/
