@@ -1,3 +1,5 @@
+
+
 html,
 body {
   height: 100%;
@@ -203,12 +205,13 @@ p {
   position: relative;
   margin-left: 4em;
   padding: 0.65em;
+  width: 35%;
 }
 
 .main .intro .startup-story img {
   display: block;
   border-radius: 4%;
-  width: 25em;
+  width: 100%;
 }
 
 /** Growth Statistics section **/
@@ -271,4 +274,29 @@ div.stats-charts-container {
 section.chart-instance {
   width: 100%;
   padding: 0;
+}
+
+@media (max-width: 900px) {
+  .flex-container {
+    display: inline;
+  }
+
+  .main .intro .startup-story .image {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  div.stats-charts-container {
+    display: inline;
+  }
+
+  .main .trending ul li {
+    width: 98%;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  .main .trending ul li {
+    width: 48%;
+  }
 }
