@@ -1,65 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="assets/index.css" />
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <title>Evolution of Tiktok</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="assets/index.css" />
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script src="https://code.highcharts.com/highcharts-more.js"></script>
-  <title>Tiktok</title>
-</head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <span class="logo"
+          ><a href="https://www.tiktok.com/en/" target="_blank"
+            ><img
+              src="images/tiktok_logo.png"
+              alt="Tiktok Logo"
+              style="width:70px;height:70px;"/></a
+        ></span>
+        <h1>Evolution of TikTok</h1>
+        <p>
+          A data visualization project that elaborates the history of TikTok and
+          its growth statistics
+          <br />
+          Built by
+          <a href="https://www.linkedin.com/in/kailingding" target="_blank"
+            >@Kailing</a
+          >
+          and <a href="https://yuxuan.fan/" target="_blank">@Yuxuan</a>.
+        </p>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#intro">How It Started</a></li>
+          <li><a href="#statistics">Growth Statistics</a></li>
+          <li><a href="#trending">Trending Videos</a></li>
+        </ul>
+      </nav>
+      <div class="main">
+        <section class="intro" id="intro">
+          <div class="startup-story flex-container">
+            <div class="content">
+              <header class="major">
+                <h2>How TikTok Started</h2>
+              </header>
+              <p>
+                In 2014, a social media app named Musical.ly became incredibly
+                popular with the 13-18 year old demographic. The main purpose of
+                Musical.ly was user-generated videos that combined popular songs
+                with videos from the users. The most popular use of the app was
+                to create videos where they were lip-syncing and dancing. By
+                mid-2017, the Musical.ly app had over 200 Million users.<br /><br />
+                In 2016, Chinese app developer ByteDance created an app named
+                Douyin, a rival to Musical.ly. Launched initially only in China,
+                the app was renamed and rebranded to TikTok for better
+                international appeal.
+                <br /><br />
+                Within a year, the TikTok app had more than 100 million users.
+                In late 2017, Musical.ly was acquired by ByteDance for a fee of
+                $800 Million. In 2018, Bytedance consolidated the user accounts
+                of Musical.ly and TikTok, merging the two apps into one under
+                the name TikTok.<br />
+              </p>
+            </div>
+            <div class="image">
+              <img
+                src="./images/Musical.ly-Merges-with-TikTok-App.jpg"
+                alt="TikTok and Musical.ly"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="statistics" id="statistics">
+          <header class="major"><h2>Growth Statistics</h2></header>
 
-<body>
-  <div class="wrapper">
-    <div class="header">
-      <span class="logo"><img src="images/tiktok_logo.png" alt="Tiktok Logo" style="width:70px;height:70px;" /></span>
-      <h1>Evolution of TikTok</h1>
-      <p>
-        A data visualization project that elaborates the history of TikTok and
-        its growth statistics
-        <br />
-        Built by
-        <a href="https://www.linkedin.com/in/kailingding">@Kailing</a> and
-        <a href="https://yuxuan.fan/">@Yuxuan</a>.
-      </p>
+          <div class="stats-region-nav">
+            <button>Global</button>
+            <button>China</button>
+            <button>United States</button>
+            <button>India</button>
+            <button>South Korea</button>
+          </div>
+          <div class="stats-charts-container">
+            <section class="chart-instance" id="chart-total-download"></section>
+            <section class="chart-instance" id="chart-num-users"></section>
+          </div>
+          <div class="stats-charts-container">
+            <section
+              class="chart-instance"
+              id="chart-most-freq-words"
+            ></section>
+            <section class="chart-instance" id="chart-market-shares"></section>
+          </div>
+        </section>
+        <section class="trending" id="trending">
+          <header class="major"><h2>Trending Videos</h2></header>
+          <ul>
+            <li>
+              <blockquote
+                class="tiktok-embed"
+                cite="https://www.tiktok.com/@who/video/6804926567844678917"
+                data-video-id="6804926567844678917"
+                style="max-width: 605px;min-width: 325px;"
+              >
+                <section>
+                  <a
+                    target="_blank"
+                    title="@who"
+                    href="https://www.tiktok.com/@who"
+                    >@who</a
+                  >
+                  <p>
+                    “We have a simple message for all countries: test, test,
+                    test!”- Dr Tedros
+                    <a
+                      title="covid19"
+                      target="_blank"
+                      href="https://www.tiktok.com/tag/covid19"
+                      >##COVID19</a
+                    >
+                    <a
+                      title="coronavirus"
+                      target="_blank"
+                      href="https://www.tiktok.com/tag/coronavirus"
+                      >##coronavirus</a
+                    >
+                  </p>
+                  <a
+                    target="_blank"
+                    title="♬ original sound - who"
+                    href="https://www.tiktok.com/music/original-sound-6804910381820152581"
+                    >♬ original sound - who</a
+                  >
+                </section>
+              </blockquote>
+              <script async src="https://www.tiktok.com/embed.js"></script>
+            </li>
+            <li>
+              <blockquote
+                class="tiktok-embed"
+                cite="https://www.tiktok.com/@itzslavik/video/6801119825851649285"
+                data-video-id="6801119825851649285"
+                style="max-width: 605px;min-width: 325px;"
+              >
+                <section>
+                  <a
+                    target="_blank"
+                    title="@itzslavik"
+                    href="https://www.tiktok.com/@itzslavik"
+                    >@itzslavik</a
+                  >
+                  <p>
+                    Gravity left the chat... @_aubreyfisher
+                    <a
+                      title="theboxchallenge"
+                      target="_blank"
+                      href="https://www.tiktok.com/tag/theboxchallenge"
+                      >##theboxchallenge</a
+                    >
+                    <a
+                      title="ultrasmoothmoves"
+                      target="_blank"
+                      href="https://www.tiktok.com/tag/ultrasmoothmoves"
+                      >##UltraSmoothMoves</a
+                    >
+                    <a
+                      title="realdance"
+                      target="_blank"
+                      href="https://www.tiktok.com/tag/realdance"
+                      >##realdance</a
+                    >
+                  </p>
+                  <a
+                    target="_blank"
+                    title="♬ The Box - Roddy Ricch"
+                    href="https://www.tiktok.com/music/The-Box-6768646921029470981"
+                    >♬ The Box - Roddy Ricch</a
+                  >
+                </section>
+              </blockquote>
+              <script async src="https://www.tiktok.com/embed.js"></script>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <footer class="footer"></footer>
     </div>
-    <nav class="nav">
-      <ul>
-        <li><a href="#intro">How It Started</a></li>
-        <li><a href="#feature">Core Feature</a></li>
-        <li><a href="#">TBD</a></li>
-        <li><a href="#statistics">Growth Statistics</a></li>
-      </ul>
-    </nav>
-    <div class="main">
-      <section class="into">intro section testing</section>
-      <section class="feature">feature section testing</section>
-      <section class="">unknown section testing</section>
-      <section class="statistics">
-        <h3>Growth Statistics</h3>
-        <div class="stats-region-nav">
-          <button>Global</button>
-          <button>China</button>
-          <button>United States</button>
-          <button>India</button>
-          <button>South Korea</button>
-        </div>
-        <div class="stats-charts-container">
-          <section class="chart-instance" id="chart-total-download"></section>
-          <section class="chart-instance" id="chart-num-users"></section>
-        </div>
-        <div class="stats-charts-container">
-          <section class="chart-instance" id="chart-most-freq-words"></section>
-          <section class="chart-instance" id="chart-market-shares"></section>
-        </div>
-
-      </section>
-    </div>
-    <footer class="footer"></footer>
-  </div>
-  <script src="charts.js"></script>
-</body>
-
+    <script src="charts.js"></script>
+  </body>
 </html>
