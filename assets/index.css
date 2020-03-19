@@ -56,6 +56,7 @@ p {
   letter-spacing: -0.025em;
   font-family: inherit;
   font-weight: 300;
+  opacity: 0.75;
 }
 
 .header br {
@@ -82,6 +83,16 @@ p {
   text-align: center;
   font-weight: 300;
   margin: 0 auto;
+}
+
+.nav .alt {
+  position: fixed;
+  top: 0;
+  padding: 0.5em 1em;
+  background-color: rgba(247, 247, 247, 0.95);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  z-index: 10000;
 }
 
 .nav ul {
