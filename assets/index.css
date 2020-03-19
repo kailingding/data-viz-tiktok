@@ -164,3 +164,19 @@ p {
   width: calc(100% + 2em);
   margin: 0 0 3em -2em;
 }
+
+
+/**Stats charts**/
+text.highcharts-credits {
+  display: none;
+}
+
+div.stats-charts-container {
+  display: flex;
+}
+
+section.chart-instance {
+  width: 100%;
+  padding: 0;
+}
+
