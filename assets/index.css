@@ -74,7 +74,7 @@ p {
   color: inherit;
 }
 
-.nav {
+#nav {
   display: block;
   color: #636363;
   position: absolute;
@@ -87,32 +87,39 @@ p {
   font-weight: 300;
   margin: 0 auto;
 }
-
-.nav .alt {
+#nav.alt {
   position: fixed;
   top: 0;
   padding: 0.5em 1em;
-  background-color: rgba(247, 247, 247, 0.95);
+  background-color: rgba(238, 238, 238, 0.9);
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   z-index: 10000;
 }
 
-.nav ul {
+#nav.alt ul li {
+  margin: 0 2em;
+}
+
+#nav.alt ul li a {
+  font-size: 0.9em;
+}
+
+#nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.nav ul li {
+#nav ul li {
   transition: margin 0.2s ease;
   display: inline-block;
-  margin: 0 0.35em;
+  margin: 0 2em;
   padding: 0;
   vertical-align: middle;
 }
 
-.nav ul li a {
+#nav ul li a {
   transition: font-size 0.2s ease;
   display: inline-block;
   height: 2.25em;
@@ -124,20 +131,20 @@ p {
   color: inherit;
 }
 
-.nav ul li a.active {
+#nav ul li a.active {
   background-color: #ffffff;
   box-shadow: none;
 }
 
-.nav ul li a:hover {
+#nav ul li a:hover {
   background-color: rgba(222, 222, 222, 0.25);
 }
 
-.nav a:hover {
+#nav a:hover {
   color: #636363;
 }
 
-.nav + .main {
+#nav + .main {
   padding-top: 4.25em;
 }
 
