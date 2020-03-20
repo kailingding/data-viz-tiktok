@@ -483,9 +483,9 @@ async function loadJSON(path) {
 }
 
 function plotStatsCharts() {
-  agPromise = loadJSON("./assets/data/user-ages-by-gender.json");
-  mrPromise = loadJSON("./assets/data/monthly-ratings.json");
-  siPromise = loadJSON("./assets/data/search-interests.json");
+  const agPromise = loadJSON("./assets/data/user-ages-by-gender.json");
+  const mrPromise = loadJSON("./assets/data/monthly-ratings.json");
+  const siPromise = loadJSON("./assets/data/search-interests.json");
 
   plotTotalDownload();
   plotNumUsers();
