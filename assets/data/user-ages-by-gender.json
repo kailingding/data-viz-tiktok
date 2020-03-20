@@ -1,0 +1,99 @@
+[
+    {
+        "id": " ",
+        "parent": "",
+        "name": ""
+    },
+    {
+        "id": "1.1",
+        "parent": " ",
+        "name": "Male",
+        "color": "#187BCD"
+    },
+    {
+        "id": "1.2",
+        "parent": " ",
+        "name": "Female",
+        "color": "#EC407A"
+    },
+    {
+        "id": "2.1.1",
+        "parent": "1.1",
+        "gender": "Male",
+        "name": "10-19",
+        "color": "#D0EFFF",
+        "value": 11.5
+    },
+    {
+        "id": "2.1.2",
+        "parent": "1.1",
+        "gender": "Male",
+        "name": "20-29",
+        "color": "#2A9DF4",
+        "value": 12
+    },
+    {
+        "id": "2.1.3",
+        "parent": "1.1",
+        "gender": "Male",
+        "name": "30-39",
+        "color": "#187BCD",
+        "value": 5.6
+    },
+    {
+        "id": "2.1.4",
+        "parent": "1.1",
+        "gender": "Male",
+        "name": "40-49",
+        "color": "#1167B1",
+        "value": 5.9
+    },
+    {
+        "id": "2.1.5",
+        "parent": "1.1",
+        "gender": "Male",
+        "name": "50+",
+        "color": "#03254C",
+        "value": 1.6
+    },
+    {
+        "id": "2.2.1",
+        "parent": "1.2",
+        "gender": "Female",
+        "name": "10-19",
+        "color": "#FCE4EC",
+        "value": 27
+    },
+    {
+        "id": "2.2.2",
+        "parent": "1.2",
+        "gender": "Female",
+        "name": "20-29",
+        "color": "#F48FB1",
+        "value": 16.8
+    },
+    {
+        "id": "2.2.3",
+        "parent": "1.2",
+        "gender": "Female",
+        "name": "30-39",
+        "color": "#EC407A",
+        "value": 8.2
+    },
+    {
+        "id": "2.2.4",
+        "parent": "1.2",
+        "gender": "Female",
+        "name": "40-49",
+        "color": "#C2185B",
+        "value": 7.9
+    },
+    {
+        "id": "2.2.5",
+        "parent": "1.2",
+        "gender": "Female",
+        "name": "50+",
+        "color": "#880E4F",
+        "value": 3.5
+    }
+]

@@ -174,95 +174,7 @@ function plotUserAges() {
   Highcharts.chart('chart-user-ages', config);
 }
 
-function plotUserAgesByGender() {
-  let data = [
-    {
-      id: ' ',
-      parent: '',
-      name: ''
-    }, {
-      id: '1.1',
-      parent: ' ',
-      name: 'Male',
-      color: '#187BCD'
-    }, {
-      id: '1.2',
-      parent: ' ',
-      name: 'Female',
-      color: '#EC407A'
-    }, {
-      id: '2.1.1',
-      parent: '1.1',
-      gender: 'Male',
-      name: '10-19',
-      color: '#D0EFFF',
-      value: 11.5
-    }, {
-      id: '2.1.2',
-      parent: '1.1',
-      gender: 'Male',
-      name: '20-29',
-      color: '#2A9DF4',
-      value: 12
-    }, {
-      id: '2.1.3',
-      parent: '1.1',
-      gender: 'Male',
-      name: '30-39',
-      color: '#187BCD',
-      value: 5.6
-    }, {
-      id: '2.1.4',
-      parent: '1.1',
-      gender: 'Male',
-      name: '40-49',
-      color: '#1167B1',
-      value: 5.9
-    }, {
-      id: '2.1.5',
-      parent: '1.1',
-      gender: 'Male',
-      name: '50+',
-      color: '#03254C',
-      value: 1.6
-    }, {
-      id: '2.2.1',
-      parent: '1.2',
-      gender: 'Female',
-      name: '10-19',
-      color: '#FCE4EC',
-      value: 27
-    }, {
-      id: '2.2.2',
-      parent: '1.2',
-      gender: 'Female',
-      name: '20-29',
-      color: '#F48FB1',
-      value: 16.8
-    }, {
-      id: '2.2.3',
-      parent: '1.2',
-      gender: 'Female',
-      name: '30-39',
-      color: '#EC407A',
-      value: 8.2
-    }, {
-      id: '2.2.4',
-      parent: '1.2',
-      gender: 'Female',
-      name: '40-49',
-      color: '#C2185B',
-      value: 7.9
-    }, {
-      id: '2.2.5',
-      parent: '1.2',
-      gender: 'Female',
-      name: '50+',
-      color: '#880E4F',
-      value: 3.5
-    }
-  ];
-
+function plotUserAgesByGender(data) {
   let config = {
     chart: {
       height: '95%',
@@ -324,234 +236,71 @@ function plotUserAgesByGender() {
   Highcharts.chart('chart-user-ages-by-gender', config);
 }
 
-function plotMonthlyRatings() {
-  let config = {
-    chart: {
-      type: 'streamgraph',
-      marginBottom: 90,
-      zoomType: 'x',
-      backgroundColor: '#f7f7f7'
-    },
+function plotMonthlyRatings(data) {
+  if (data) {
+    let config = {
+      chart: {
+        type: 'streamgraph',
+        marginBottom: 90,
+        zoomType: 'x',
+        backgroundColor: '#f7f7f7'
+      },
 
-    colors: [
-      '#00602B', // 5-star
-      '#92D14F', // 4-star
-      '#FEC923', // 3-star
-      '#FA9924', // 2-star
-      '#EA0001', // 1-star
-    ],
-
-    title: {
-      floating: true,
-      align: 'center',
-      text: 'TikTok\'s Monthly Ratings on App Store'
-    },
-
-    subtitle: {
-      floating: true,
-      align: 'center',
-      y: 30,
-      text: 'Source: AppBot.co'
-    },
-
-    xAxis: {
-      maxPadding: 0,
-      offset: 30,
-      type: 'category',
-      crosshair: true,
-      categories: [
-        'Apr 2018',
-        'May 2018',
-        'Jun 2018',
-        'Jul 2018',
-        'Aug 2018',
-        'Sep 2018',
-        'Oct 2018',
-        'Nov 2018',
-        'Dec 2018',
-        'Jan 2019',
-        'Feb 2019',
-        'Mar 2019',
-        'Apr 2019',
-        'May 2019',
-        'Jun 2019',
-        'Jul 2019',
-        'Aug 2019',
-        'Sep 2019',
-        'Oct 2019',
-        'Nov 2019',
-        'Dec 2019',
-        'Jan 2020',
-        'Feb 2020'
+      colors: [
+        '#00602B', // 5-star
+        '#92D14F', // 4-star
+        '#FEC923', // 3-star
+        '#FA9924', // 2-star
+        '#EA0001', // 1-star
       ],
-      labels: {
-        align: 'left',
-        reserveSpace: false,
-        rotation: 320
-      },
-      lineWidth: 0,
-      margin: 0,
-      tickWidth: 0
-    },
 
-    yAxis: {
-      visible: false,
-      startOnTick: false,
-      endOnTick: false
-    },
+      title: {
+        floating: true,
+        align: 'center',
+        text: 'TikTok\'s Monthly Ratings on App Store'
+      },
 
-    legend: {
-      enabled: true,
-      align: 'center',
-      verticalAlign: 'top',
-      y: 30
-    },
-    colors: ['#a2a6d1', '#8dc8ef', '#8b6fd4', '#bd9fc1', '#e5a6b3'],
-    series: [
-      {
-        name: '5-star',
-        data: [
-          32093,
-          70836,
-          13570,
-          121833,
-          90820,
-          65205,
-          76288,
-          91934,
-          103846,
-          135744,
-          105289,
-          100421,
-          99231,
-          96250,
-          113144,
-          135576,
-          154151,
-          158399,
-          171379,
-          199539,
-          266589,
-          290435,
-          187956
-        ]
+      subtitle: {
+        floating: true,
+        align: 'center',
+        y: 30,
+        text: 'Source: AppBot.co'
       },
-      {
-        name: '4-star',
-        data: [
-          1736,
-          2811,
-          2142,
-          5083,
-          4476,
-          2483,
-          2879,
-          3650,
-          4266,
-          5204,
-          4465,
-          4660,
-          4038,
-          3992,
-          4933,
-          5614,
-          5340,
-          5429,
-          5081,
-          5355,
-          7200,
-          7274,
-          4551
-        ]
-      },
-      {
-        name: '3-star',
-        data: [
-          888,
-          1558,
-          1940,
-          2290,
-          2589,
-          1115,
-          1351,
-          1737,
-          2099,
-          2455,
-          2419,
-          2619,
-          1893,
-          1638,
-          1930,
-          2116,
-          2180,
-          2012,
-          1901,
-          1797,
-          2322,
-          2219,
-          1404
-        ]
-      },
-      {
-        name: '2-star',
-        data: [
-          694,
-          1313,
-          1619,
-          1178,
-          1689,
-          681,
-          883,
-          1185,
-          1455,
-          1538,
-          2097,
-          2019,
-          1159,
-          1029,
-          1176,
-          1351,
-          1436,
-          1369,
-          1240,
-          1039,
-          1268,
-          1493,
-          787
-        ]
-      },
-      {
-        name: '1-star',
-        data: [
-          1948,
-          5582,
-          4859,
-          2688,
-          6755,
-          2504,
-          4973,
-          5566,
-          5378,
-          5825,
-          10772,
-          8174,
-          4074,
-          3395,
-          4446,
-          4470,
-          4590,
-          4712,
-          4428,
-          4163,
-          4742,
-          5467,
-          3276
-        ]
-      }
-    ]
-  };
 
-  Highcharts.chart('chart-monthly-ratings', config);
+      xAxis: {
+        maxPadding: 0,
+        offset: 30,
+        type: 'category',
+        crosshair: true,
+        categories: data.category,
+        labels: {
+          align: 'left',
+          reserveSpace: false,
+          rotation: 320
+        },
+        lineWidth: 0,
+        margin: 0,
+        tickWidth: 0
+      },
+
+      yAxis: {
+        visible: false,
+        startOnTick: false,
+        endOnTick: false
+      },
+
+      legend: {
+        enabled: true,
+        align: 'center',
+        verticalAlign: 'top',
+        y: 30
+      },
+      colors: ['#a2a6d1', '#8dc8ef', '#8b6fd4', '#bd9fc1', '#e5a6b3'],
+      series: data.series
+    };
+
+    Highcharts.chart('chart-monthly-ratings', config);
+  }
 }
 
 function plotNA() {
@@ -688,14 +437,23 @@ async function loadJSON(path) {
 }
 
 function plotStatsCharts() {
+  agPromise = loadJSON('./assets/data/user-ages-by-gender.json');
+  mrPromise = loadJSON('./assets/data/monthly-ratings.json');
+  siPromise = loadJSON('./assets/data/search-interests.json');
+
   plotTotalDownload();
   plotNumUsers();
-  // plotMarketShares(region);
   plotNA();
   plotUserAges();
   plotUserAgesByGender();
   plotMonthlyRatings();
-  siPromise = loadJSON('./assets/data/search-interests.json');
+
+  agPromise.then(function (data) {
+    plotUserAgesByGender(data);
+  });
+  mrPromise.then(function (data) {
+    plotMonthlyRatings(data);
+  });
   siPromise.then(function (data) {
     plotSearchInterest(data);
   });
