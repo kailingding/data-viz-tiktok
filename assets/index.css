@@ -1,5 +1,3 @@
-
-
 html,
 body {
   height: 100%;
@@ -81,14 +79,17 @@ p {
   color: #636363;
   position: absolute;
   width: 72em;
-  max-width: inherit;
+  max-width: calc(100% - 6em);
   padding: 1em;
   background-color: rgba(222, 222, 222, 0.25);
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
   cursor: default;
   text-align: center;
   font-weight: 300;
-  margin: 0 auto;
+  margin: 0;
 }
+
 #nav.alt {
   position: fixed;
   top: 0;
@@ -97,6 +98,7 @@ p {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   z-index: 10000;
+  width: 72em;
 }
 
 #nav.alt ul li {
@@ -279,6 +281,22 @@ section.chart-instance {
 @media (max-width: 900px) {
   .flex-container {
     display: inline;
+  }
+
+  #nav ul li {
+    margin: 0 0.2em;
+  }
+
+  #nav ul li a {
+    font-size: 0.8em;
+  }
+
+  #nav.alt ul li {
+    margin: 0 0.5em;
+  }
+
+  #nav.alt ul li a {
+    font-size: 0.9em;
   }
 
   .main .intro .startup-story .image {
