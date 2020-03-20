@@ -271,6 +271,20 @@ p {
   width: 33%;
 }
 
+.trending-intros {
+  margin-bottom: 35px;
+}
+
+.trending-intros .content {
+  width: 50%;
+}
+
+.trending-intros .image {
+  width: 50%;
+  padding-right: 1%;
+  text-align: center;
+}
+
 /** Footer Section **/
 .footer {
   padding: 4em 4em 2em 4em;
@@ -364,6 +378,15 @@ section.chart-instance {
 
   .main .trending ul li {
     width: 98%;
+  }
+
+  .trending-intros .content {
+    width: 100%;
+  }
+  
+  .trending-intros .image {
+    width: 100%;
+    padding-right: 0%;
   }
 }
 
