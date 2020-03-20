@@ -1,246 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="assets/index.css" />
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/item-series.js"></script>
+    <script src="https://code.highcharts.com/modules/streamgraph.js"></script>
+    <script src="https://code.highcharts.com/modules/heatmap.js"></script>
+    <script src="https://code.highcharts.com/modules/tilemap.js"></script>
+    <script src="https://code.highcharts.com/modules/sunburst.js"></script>
+    <script src="http://code.highcharts.com/maps/modules/map.js"></script>
+    <script src="https://code.highcharts.com/mapdata/custom/north-america.js"></script>
+    <script type="module" src="./assets/js/stickyNavBar.js"></script>
+    <title>Evolution of Tiktok</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="assets/index.css" />
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script src="https://code.highcharts.com/highcharts-more.js"></script>
-  <script src="https://code.highcharts.com/modules/item-series.js"></script>
-  <script src="https://code.highcharts.com/modules/streamgraph.js"></script>
-  <script src="https://code.highcharts.com/modules/heatmap.js"></script>
-  <script src="https://code.highcharts.com/modules/tilemap.js"></script>
-  <script src="https://code.highcharts.com/modules/sunburst.js"></script>
-  <script src="https://code.highcharts.com/mapdata/custom/north-america.js"></script>
-  <script type="module" src="./assets/js/stickyNavBar.js"></script>
-  <title>Evolution of Tiktok</title>
-</head>
-
-<body>
-  <div class="wrapper">
-    <div class="header">
-      <span class="logo"><a href="https://www.tiktok.com/en/" target="_blank"><img src="images/tiktok_logo.png" alt="Tiktok Logo"
-            style="width:70px;height:70px;" /></a></span>
-      <h1>Evolution of TikTok</h1>
-      <p>
-        A data visualization project that elaborates the history of TikTok and
-        its growth statistics
-        <br />
-        Built by
-        <a href="https://www.linkedin.com/in/kailingding" target="_blank">@Kailing</a>
-        and <a href="https://yuxuan.fan/" target="_blank">@Yuxuan</a>.
-      </p>
-    </div>
-    <div id="nav">
-      <ul>
-        <li><a href="#intro">How It Started</a></li>
-        <li><a href="#statistics">Growth Statistics</a></li>
-        <li><a href="#trending">Trending Videos</a></li>
-      </ul>
-    </div>
-    <div class="main">
-      <section class="intro" id="intro">
-        <div class="startup-story flex-container">
-          <div class="content">
-            <header class="major">
-              <h2>How TikTok Started</h2>
-            </header>
-            <p>
-              In 2014, a social media app named Musical.ly became incredibly
-              popular with the 13-18 year old demographic. The main purpose of
-              Musical.ly was user-generated videos that combined popular songs
-              with videos from the users. The most popular use of the app was
-              to create videos where they were lip-syncing and dancing. By
-              mid-2017, the Musical.ly app had over 200 Million users.<br /><br />
-              In 2016, Chinese app developer ByteDance created an app named
-              Douyin, a rival to Musical.ly. Launched initially only in China,
-              the app was renamed and rebranded to TikTok for better
-              international appeal.
-              <br /><br />
-              Within a year, the TikTok app had more than 100 million users.
-              In late 2017, Musical.ly was acquired by ByteDance for a fee of
-              $800 Million. In 2018, Bytedance consolidated the user accounts
-              of Musical.ly and TikTok, merging the two apps into one under
-              the name TikTok.<br />
-            </p>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <span class="logo"
+          ><a href="https://www.tiktok.com/en/" target="_blank"
+            ><img
+              src="images/tiktok_logo.png"
+              alt="Tiktok Logo"
+              style="width:70px;height:70px;"/></a
+        ></span>
+        <h1>Evolution of TikTok</h1>
+        <p>
+          A data visualization project that elaborates the history of TikTok and
+          its growth statistics
+          <br />
+          Built by
+          <a href="https://www.linkedin.com/in/kailingding" target="_blank"
+            >@Kailing</a
+          >
+          and <a href="https://yuxuan.fan/" target="_blank">@Yuxuan</a>.
+        </p>
+      </div>
+      <div id="nav">
+        <ul>
+          <li><a href="#intro">How It Started</a></li>
+          <li><a href="#statistics">Growth Statistics</a></li>
+          <li><a href="#trending">Trending Videos</a></li>
+        </ul>
+      </div>
+      <div class="main">
+        <section class="intro" id="intro">
+          <div class="startup-story flex-container">
+            <div class="content">
+              <header class="major">
+                <h2>How TikTok Started</h2>
+              </header>
+              <p>
+                In 2014, a social media app named Musical.ly became incredibly
+                popular with the 13-18 year old demographic. The main purpose of
+                Musical.ly was user-generated videos that combined popular songs
+                with videos from the users. The most popular use of the app was
+                to create videos where they were lip-syncing and dancing. By
+                mid-2017, the Musical.ly app had over 200 Million users.<br /><br />
+                In 2016, Chinese app developer ByteDance created an app named
+                Douyin, a rival to Musical.ly. Launched initially only in China,
+                the app was renamed and rebranded to TikTok for better
+                international appeal.
+                <br /><br />
+                Within a year, the TikTok app had more than 100 million users.
+                In late 2017, Musical.ly was acquired by ByteDance for a fee of
+                $800 Million. In 2018, Bytedance consolidated the user accounts
+                of Musical.ly and TikTok, merging the two apps into one under
+                the name TikTok.<br />
+              </p>
+            </div>
+            <div class="image">
+              <img
+                src="./images/Musical.ly-Merges-with-TikTok-App.jpg"
+                alt="TikTok and Musical.ly"
+              />
+            </div>
           </div>
-          <div class="image">
-            <img src="./images/Musical.ly-Merges-with-TikTok-App.jpg" alt="TikTok and Musical.ly" />
+        </section>
+        <section class="statistics" id="statistics">
+          <header class="major">
+            <h2>Growth Statistics</h2>
+          </header>
+
+          <!-- Number of Downloads -->
+          <header class="major">
+            <h3>How Many People Have Downloaded TikTok?</h3>
+          </header>
+          <div class="stats-charts-container" id="downloads">
+            <section class="chart-instance" id="chart-total-download"></section>
+            <section class="chart-instance" id="chart-num-users"></section>
           </div>
-        </div>
-      </section>
-      <section class="statistics" id="statistics">
-        <header class="major">
-          <h2>Growth Statistics</h2>
-        </header>
+          <hr />
 
-        <!-- Number of Downloads -->
-        <header class="major">
-          <h3>How Many People Have Downloaded TikTok?</h3>
-        </header>
-        <div class="stats-charts-container">
-          <section class="chart-instance" id="chart-total-download"></section>
-          <section class="chart-instance" id="chart-num-users"></section>
-        </div>
-        <hr />
-
-        <!-- Number of Users -->
-        <header class="major">
-          <h3>How Many Active TikTok's Users Are There?</h3>
-        </header>
-        <div class="stats-charts-container">
-          <section class="chart-instance" id="tiktok-logo">
-            <img src="./images/tiktok-logo.png" style="width: 300px;" />
-            <h3>500M</h3>
-          </section>
-          <section class="chart-instance" id="greater-than-sign">
-            <img src="./images/greater_than.svg.png" style="width: 90px;" />
-          </section>
-          <section class="chart-instance">
-            <div id="chart-na"></div>
-          </section>
-          <!--<section
+          <!-- Number of Users -->
+          <header class="major">
+            <h3>How Many Active TikTok's Users Are There?</h3>
+          </header>
+          <div class="stats-charts-container num-users">
+            <section class="chart-instance" id="tiktok-logo">
+              <img src="./images/tiktok-logo.png" style="width: 300px;" />
+              <h3>500M</h3>
+              <span>TikTok Users</span>
+            </section>
+            <section class="chart-instance" id="greater-than-sign">
+              <img src="./images/greater_than.svg.png" style="width: 90px;" />
+            </section>
+            <section class="chart-instance">
+              <div id="chart-na"></div>
+              <div id="chart-na-desc">
+                <h3>493M</h3>
+                <span>Population of USA, Canada, Mexico Combined!</span>
+              </div>
+            </section>
+            <!--<section
               class="chart-instance"
               id="chart-most-freq-words"
             ></section> 
             <section class="chart-instance" id="chart-market-shares"></section>-->
-        </div>
-        <hr />
+          </div>
+          <hr />
 
-        <!-- User age distribution -->
-        <header class="major">
-          <h3>User Age Distribution</h3>
-        </header>
-        <div class="stats-charts-container">
-          <section class="chart-instance" id="chart-user-ages"></section>
-          <section class="chart-instance" id="chart-user-ages-by-gender"></section>
-        </div>
-        <hr />
+          <!-- User age distribution -->
+          <header class="major">
+            <h3>User Age Distribution</h3>
+          </header>
+          <div class="stats-charts-container">
+            <section class="chart-instance" id="chart-user-ages"></section>
+            <section
+              class="chart-instance"
+              id="chart-user-ages-by-gender"
+            ></section>
+          </div>
+          <hr />
 
-        <!-- Monthly Rating -->
-        <header class="major">
-          <h3>How Is TikTok's rating on App Store?</h3>
-        </header>
-        <div class="stats-charts-container">
-          <section class="chart-instance" id="chart-monthly-ratings"></section>
-        </div>
-        <hr />
+          <!-- Monthly Rating -->
+          <header class="major">
+            <h3>How Is TikTok's rating on App Store?</h3>
+          </header>
+          <div class="stats-charts-container">
+            <section
+              class="chart-instance"
+              id="chart-monthly-ratings"
+            ></section>
+          </div>
+          <hr />
 
-        <!-- Google Search 'TikTok' by State -->
-        <header class="major">
-          <h3>What state is TikTok Most Popular In?</h3>
-        </header>
-        <div class="stats-charts-container">
-          <section class="chart-instance" id="chart-search-interest"></section>
-        </div>
-      </section>
-      <section class="trending" id="trending">
-        <header class="major">
-          <h2>Trending Videos</h2>
-        </header>
-        <ul>
-          <li>
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@who/video/6804926567844678917" data-video-id="6804926567844678917"
-              style="max-width: 605px;min-width: 325px;">
-              <section>
-                <a target="_blank" title="@who" href="https://www.tiktok.com/@who">@who</a>
-                <p>
-                  “We have a simple message for all countries: test, test,
-                  test!”- Dr Tedros
-                  <a title="covid19" target="_blank" href="https://www.tiktok.com/tag/covid19">##COVID19</a>
-                  <a title="coronavirus" target="_blank" href="https://www.tiktok.com/tag/coronavirus">##coronavirus</a>
-                </p>
-                <a target="_blank" title="♬ original sound - who" href="https://www.tiktok.com/music/original-sound-6804910381820152581">♬
-                  original sound - who</a>
-              </section>
-            </blockquote>
-            <script async src="https://www.tiktok.com/embed.js"></script>
-          </li>
-          <li>
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@therock/video/6802587850870164741"
-              data-video-id="6802587850870164741" style="max-width: 605px;min-width: 325px;">
-              <section>
-                <a target="_blank" title="@therock" href="https://www.tiktok.com/@therock">@therock</a>
-                <p>
-                  Disclaimer: No ducks were hurt in the making of this TikTok.
-                  NEW official Jungle Cruise trailer in my bio.
-                </p>
-                <a target="_blank" title="♬ original sound - therock" href="https://www.tiktok.com/music/original-sound-6802570884176481030">♬
-                  original sound - therock</a>
-              </section>
-            </blockquote>
-            <script async src="https://www.tiktok.com/embed.js"></script>
-          </li>
-          <li>
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@itzslavik/video/6801119825851649285"
-              data-video-id="6801119825851649285" style="max-width: 605px;min-width: 325px;">
-              <section>
-                <a target="_blank" title="@itzslavik" href="https://www.tiktok.com/@itzslavik">@itzslavik</a>
-                <p>
-                  Gravity left the chat... @_aubreyfisher
-                  <a title="theboxchallenge" target="_blank" href="https://www.tiktok.com/tag/theboxchallenge">##theboxchallenge</a>
-                  <a title="ultrasmoothmoves" target="_blank" href="https://www.tiktok.com/tag/ultrasmoothmoves">##UltraSmoothMoves</a>
-                  <a title="realdance" target="_blank" href="https://www.tiktok.com/tag/realdance">##realdance</a>
-                </p>
-                <a target="_blank" title="♬ The Box - Roddy Ricch" href="https://www.tiktok.com/music/The-Box-6768646921029470981">♬
-                  The Box - Roddy Ricch</a>
-              </section>
-            </blockquote>
-            <script async src="https://www.tiktok.com/embed.js"></script>
-          </li>
-          <li>
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@_yugi_01/video/6792675734461631750"
-              data-video-id="6792675734461631750" style="max-width: 605px;min-width: 325px;">
-              <section>
-                <a target="_blank" title="@_yugi_01" href="https://www.tiktok.com/@_yugi_01">@_yugi_01</a>
-                <p>
-                  Who else need this as there alarm 🤣
-                  <a title="cepacolsickbeats" target="_blank" href="https://www.tiktok.com/tag/cepacolsickbeats">##CepacolSickBeats</a>
-                  <a title="justaddglitter" target="_blank" href="https://www.tiktok.com/tag/justaddglitter">##JustAddGlitter</a>
-                  <a title="viral" target="_blank" href="https://www.tiktok.com/tag/viral">##viral</a>
-                  <a title="foryoupage" target="_blank" href="https://www.tiktok.com/tag/foryoupage">##foryoupage</a>
-                  <a title="foryou" target="_blank" href="https://www.tiktok.com/tag/foryou">##foryou</a>
-                  <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp">##fyp</a>
-                  <a title="newalarmsystem" target="_blank" href="https://www.tiktok.com/tag/newalarmsystem">##newalarmsystem</a>
-                </p>
-                <a target="_blank" title="♬ original sound - yugisgaming" href="https://www.tiktok.com/music/original-sound-6792657171961187077">♬
-                  original sound - yugisgaming</a>
-              </section>
-            </blockquote>
-            <script async src="https://www.tiktok.com/embed.js"></script>
-          </li>
-          <li>
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@charlidamelio/video/6801497356689771781"
-              data-video-id="6801497356689771781" style="max-width: 605px;min-width: 325px;">
-              <section>
-                <a target="_blank" title="@charlidamelio" href="https://www.tiktok.com/@charlidamelio">@charlidamelio</a>
-                <p>@zoifishh</p>
-                <a target="_blank" title="♬ Supalonely (feat. Gus Dapperton) - BENEE" href="https://www.tiktok.com/music/Supalonely-feat-Gus-Dapperton-6759409576673560577">♬
-                  Supalonely (feat. Gus Dapperton) - BENEE</a>
-              </section>
-            </blockquote>
-            <script async src="https://www.tiktok.com/embed.js"></script>
-          </li>
-          <li>
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@justinbieber/video/6777723295006592261"
-              data-video-id="6777723295006592261" style="max-width: 605px;min-width: 325px;">
-              <section>
-                <a target="_blank" title="@justinbieber" href="https://www.tiktok.com/@justinbieber">@justinbieber</a>
-                <p>Yummyyyy</p>
-                <a target="_blank" title="♬ Yummy - Justin Bieber" href="https://www.tiktok.com/music/Yummy-6777509948566800385">♬
-                  Yummy - Justin Bieber</a>
-              </section>
-            </blockquote>
-            <script async src="https://www.tiktok.com/embed.js"></script>
-          </li>
-        </ul>
-      </section>
+          <!-- Google Search 'TikTok' by State -->
+          <header class="major">
+            <h3>What state is TikTok Most Popular In?</h3>
+          </header>
+          <div class="stats-charts-container">
+            <section
+              class="chart-instance"
+              id="chart-search-interest"
+            ></section>
+          </div>
+        </section>
+        <section class="trending" id="trending">
+          <header class="major">
+            <h2>Trending Videos</h2>
+          </header>
+          <ul>
+            <li>
+              <blockquote
+                class="tiktok-embed"
+                cite="https://www.tiktok.com/@who/video/6804926567844678917"
+                data-video-id="6804926567844678917"
+                style="max-width: 605px;min-width: 325px;"
+              >
+                <section>
+                  <a
+                    target="_blank"
+                    title="@who"
+                    href="https://www.tiktok.com/@who"
+                    >@who</a
+                  >
+                  <p>
+                    “We have a simple message for all countries: test, test,
+                    test!”- Dr Tedros
+                    <a
+                      title="covid19"
+                      target="_blank"
+                      href="https://www.tiktok.com/tag/covid19"
+                      >##COVID19</a
+                    >
+                    <a
+                      title="coronavirus"
+                      target="_blank"
+                      href="https://www.tiktok.com/tag/coronavirus"
+                      >##coronavirus</a
+                    >
+                  </p>
+                  <a
+                    target="_blank"
+                    title="♬ original sound - who"
+                    href="https://www.tiktok.com/music/original-sound-6804910381820152581"
+                    >♬ original sound - who</a
+                  >
+                </section>
+              </blockquote>
+              <script async src="https://www.tiktok.com/embed.js"></script>
+            </li>
+            <li>
+              <blockquote
+                class="tiktok-embed"
+                cite="https://www.tiktok.com/@therock/video/6802587850870164741"
+                data-video-id="6802587850870164741"
+                style="max-width: 605px;min-width: 325px;"
+              >
+                <section>
+                  <a
+                    target="_blank"
+                    title="@therock"
+                    href="https://www.tiktok.com/@therock"
+                    >@therock</a
+                  >
+                  <p>
+                    Disclaimer: No ducks were hurt in the making of this TikTok.
+                    NEW official Jungle Cruise trailer in my bio.
+                  </p>
+                  <a
+                    target="_blank"
+                    title="♬ original sound - therock"
+                    href="https://www.tiktok.com/music/original-sound-6802570884176481030"
+                    >♬ original sound - therock</a
+                  >
+                </section>
+              </blockquote>
+              <script async src="https://www.tiktok.com/embed.js"></script>
+            </li>
+            <li>
+              <blockquote
+                class="tiktok-embed"
+                cite="https://www.tiktok.com/@itzslavik/video/6801119825851649285"
+                data-video-id="6801119825851649285"
+                style="max-width: 605px;min-width: 325px;"
+              >
+                <section>
+                  <a
+                    target="_blank"
+                    title="@itzslavik"
+                    href="https://www.tiktok.com/@itzslavik"
+                    >@itzslavik</a
+                  >
+                  <p>
+                    Gravity left the chat... @_aubreyfisher
+                    <a
+                      title="theboxchallenge"
+                      target="_blank"
+                      href="https://www.tiktok.com/tag/theboxchallenge"
+                      >##theboxchallenge</a
+                    >
+                    <a
+                      title="ultrasmoothmoves"
+                      target="_blank"
+                      href="https://www.tiktok.com/tag/ultrasmoothmoves"
+                      >##UltraSmoothMoves</a
+                    >
+                    <a
+                      title="realdance"
+                      target="_blank"
+                      href="https://www.tiktok.com/tag/realdance"
+                      >##realdance</a
+                    >
+                  </p>
+                  <a
+                    target="_blank"
+                    title="♬ The Box - Roddy Ricch"
+                    href="https://www.tiktok.com/music/The-Box-6768646921029470981"
+                    >♬ The Box - Roddy Ricch</a
+                  >
+                </section>
+              </blockquote>
+              <script async src="https://www.tiktok.com/embed.js"></script>
+            </li>
+            <li>
+              <blockquote
+                class="tiktok-embed"
+                cite="https://www.tiktok.com/@_yugi_01/video/6792675734461631750"
+                data-video-id="6792675734461631750"
+                style="max-width: 605px;min-width: 325px;"
+              >
+                <section>
+                  <a
+                    target="_blank"
+                    title="@_yugi_01"
+                    href="https://www.tiktok.com/@_yugi_01"
+                    >@_yugi_01</a
+                  >
+                  <p>
+                    Who else need this as there alarm 🤣
+                    <a
+                      title="cepacolsickbeats"
+                      target="_blank"
+                      href="https://www.tiktok.com/tag/cepacolsickbeats"
+                      >##CepacolSickBeats</a
+                    >
+                    <a
+                      title="justaddglitter"
+                      target="_blank"
+                      href="https://www.tiktok.com/tag/justaddglitter"
+                      >##JustAddGlitter</a
+                    >
+                    <a
+                      title="viral"
+                      target="_blank"
+                      href="https://www.tiktok.com/tag/viral"
+                      >##viral</a
+                    >
+                    <a
+                      title="foryoupage"
+                      target="_blank"
+                      href="https://www.tiktok.com/tag/foryoupage"
+                      >##foryoupage</a
+                    >
+                    <a
+                      title="foryou"
+                      target="_blank"
+                      href="https://www.tiktok.com/tag/foryou"
+                      >##foryou</a
+                    >
+                    <a
+                      title="fyp"
+                      target="_blank"
+                      href="https://www.tiktok.com/tag/fyp"
+                      >##fyp</a
+                    >
+                    <a
+                      title="newalarmsystem"
+                      target="_blank"
+                      href="https://www.tiktok.com/tag/newalarmsystem"
+                      >##newalarmsystem</a
+                    >
+                  </p>
+                  <a
+                    target="_blank"
+                    title="♬ original sound - yugisgaming"
+                    href="https://www.tiktok.com/music/original-sound-6792657171961187077"
+                    >♬ original sound - yugisgaming</a
+                  >
+                </section>
+              </blockquote>
+              <script async src="https://www.tiktok.com/embed.js"></script>
+            </li>
+            <li>
+              <blockquote
+                class="tiktok-embed"
+                cite="https://www.tiktok.com/@charlidamelio/video/6801497356689771781"
+                data-video-id="6801497356689771781"
+                style="max-width: 605px;min-width: 325px;"
+              >
+                <section>
+                  <a
+                    target="_blank"
+                    title="@charlidamelio"
+                    href="https://www.tiktok.com/@charlidamelio"
+                    >@charlidamelio</a
+                  >
+                  <p>@zoifishh</p>
+                  <a
+                    target="_blank"
+                    title="♬ Supalonely (feat. Gus Dapperton) - BENEE"
+                    href="https://www.tiktok.com/music/Supalonely-feat-Gus-Dapperton-6759409576673560577"
+                    >♬ Supalonely (feat. Gus Dapperton) - BENEE</a
+                  >
+                </section>
+              </blockquote>
+              <script async src="https://www.tiktok.com/embed.js"></script>
+            </li>
+            <li>
+              <blockquote
+                class="tiktok-embed"
+                cite="https://www.tiktok.com/@justinbieber/video/6777723295006592261"
+                data-video-id="6777723295006592261"
+                style="max-width: 605px;min-width: 325px;"
+              >
+                <section>
+                  <a
+                    target="_blank"
+                    title="@justinbieber"
+                    href="https://www.tiktok.com/@justinbieber"
+                    >@justinbieber</a
+                  >
+                  <p>Yummyyyy</p>
+                  <a
+                    target="_blank"
+                    title="♬ Yummy - Justin Bieber"
+                    href="https://www.tiktok.com/music/Yummy-6777509948566800385"
+                    >♬ Yummy - Justin Bieber</a
+                  >
+                </section>
+              </blockquote>
+              <script async src="https://www.tiktok.com/embed.js"></script>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <footer class="footer"></footer>
     </div>
-    <footer class="footer"></footer>
-  </div>
-  <script src="charts.js"></script>
-</body>
-
+    <script src="charts.js"></script>
+  </body>
 </html>

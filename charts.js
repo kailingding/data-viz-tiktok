@@ -2,44 +2,70 @@ function plotTotalDownload() {
   let data = [];
   let config = {
     chart: {
-      backgroundColor: '#f7f7f7'
+      type: "bar",
+      backgroundColor: "#f7f7f7"
     },
 
     title: {
-      text: 'Top Social Media Apps Downloads in 2019'
+      text: "Top Social Media Apps Downloads in 2019",
+      style: { color: "#636363" }
     },
-
-    yAxis: {
-      title: {
-        text: 'Number of Downloads'
-      }
+    subtitle: {
+      text: 'Data Source: <a href="www.sensortower.com">SensorTower</a>'
     },
 
     xAxis: {
+      categories: ["Tiktok", "Facebook", "Instagram", "Youtube", "Snapchat"],
       title: {
-        text: 'Month'
+        text: null
       }
+    },
+
+    yAxis: {
+      min: 0,
+      title: {
+        text: "Number of Downloads (in Million)"
+      },
+      labels: {
+        overflow: "justify"
+      }
+    },
+    tooltip: {
+      valueSuffix: " millions",
+      pointFormat: "Downloads: {point.y}"
     },
 
     legend: {
-      layout: 'vertical',
-      align: 'right',
-      verticalAlign: 'middle'
+      enabled: false
     },
-
-    plotOptions: {
-      series: {
-        label: {
-          connectorAllowed: false
-        },
-        pointStart: 2010
-      }
+    credits: {
+      enabled: false
     },
-
     series: [
       {
-        name: 'TikTok',
-        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+        data: [
+          {
+            name: "TikTok",
+            y: 734,
+            color: "#ff5c6e"
+          },
+          {
+            name: "Facebook",
+            y: 667,
+            color: "#a2a6d1"
+          },
+          {
+            name: "Instagram",
+            y: 448,
+            color: "#a2a6d1"
+          },
+          {
+            name: "Youtube",
+            y: 285,
+            color: "#a2a6d1"
+          },
+          { name: "Snapchat", y: 283, color: "#a2a6d1" }
+        ]
       }
     ],
 
@@ -51,45 +77,49 @@ function plotTotalDownload() {
           },
           chartOptions: {
             legend: {
-              layout: 'horizontal',
-              align: 'center',
-              verticalAlign: 'bottom'
+              layout: "horizontal",
+              align: "center",
+              verticalAlign: "bottom"
             }
           }
         }
       ]
     }
   };
-  Highcharts.chart('chart-total-download', config);
+  Highcharts.chart("chart-total-download", config);
 }
 
 function plotNumUsers() {
   let data = [];
   let config = {
     chart: {
-      backgroundColor: '#f7f7f7'
+      backgroundColor: "#f7f7f7"
     },
 
     title: {
-      text: 'Total Downloads Worldwide'
+      text: "Total Downloads Worldwide",
+      style: { color: "#636363" }
+    },
+
+    subtitle: {
+      text:
+        'Data Source: <a href="https://sensortower.com/blog/tiktok-revenue-downloads-2019">SensorTower</a>'
     },
 
     yAxis: {
       title: {
-        text: 'Number of Users'
+        text: "Number of Downloads (in Million)"
       }
     },
 
     xAxis: {
       title: {
-        text: 'Month'
+        text: "Year"
       }
     },
-
+    colors: ["#ff5c6e"],
     legend: {
-      layout: 'vertical',
-      align: 'right',
-      verticalAlign: 'middle'
+      enabled: false
     },
 
     plotOptions: {
@@ -103,8 +133,8 @@ function plotNumUsers() {
 
     series: [
       {
-        name: 'TikTok',
-        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+        name: "TikTok",
+        data: [67.9, 131.5, 655.8, 738.5]
       }
     ],
 
@@ -116,165 +146,179 @@ function plotNumUsers() {
           },
           chartOptions: {
             legend: {
-              layout: 'horizontal',
-              align: 'center',
-              verticalAlign: 'bottom'
+              layout: "horizontal",
+              align: "center",
+              verticalAlign: "bottom"
             }
           }
         }
       ]
     }
   };
-  Highcharts.chart('chart-num-users', config);
+  Highcharts.chart("chart-num-users", config);
 }
 
 function plotUserAges() {
   let config = {
     chart: {
-      type: 'item',
-      backgroundColor: '#f7f7f7',
-      height: '100%'
+      type: "item",
+      backgroundColor: "#f7f7f7",
+      height: "100%"
     },
 
     title: {
-      text: 'TikTok\'s User Age Distribution'
+      text: "TikTok's User Age Distribution",
+      style: { color: "#636363" }
     },
 
     subtitle: {
-      text: 'Source: App Ape Lab.'
+      text: "Source: App Ape Lab."
     },
     series: [
       {
-        name: 'Percentage',
-        keys: ['name', 'y', 'color', 'label'],
+        name: "Percentage",
+        keys: ["name", "y", "color", "label"],
         data: [
-          ['10-19', 385, '#31A9FE', '10-19'],
-          ['20-29', 288, '#8631FE', '20-29'],
-          ['30-39', 138, '#FFAE80', '30-39'],
-          ['40-49', 138, '#ED31FE', '40-49'],
-          ['50+', 51, '#3142FE', '50+']
+          ["10-19", 385, "#31A9FE", "10-19"],
+          ["20-29", 288, "#8631FE", "20-29"],
+          ["30-39", 138, "#FFAE80", "30-39"],
+          ["40-49", 138, "#ED31FE", "40-49"],
+          ["50+", 51, "#3142FE", "50+"]
         ],
         dataLabels: {
           enabled: false
         },
-        center: ['50%', '75%'],
-        size: '100%',
+        center: ["50%", "75%"],
+        size: "100%",
         startAngle: -100,
         endAngle: 100
       }
     ],
 
     tooltip: {
-      formatter: function () {
-        return 'Age ' + this.key + ': ' + this.y / 10 + '%';
+      formatter: function() {
+        return "Age " + this.key + ": " + this.y / 10 + "%";
       }
     }
   };
 
-  Highcharts.chart('chart-user-ages', config);
+  Highcharts.chart("chart-user-ages", config);
 }
 
 function plotUserAgesByGender(data) {
   let config = {
     chart: {
-      height: '95%',
-      backgroundColor: '#f7f7f7'
+      height: "95%",
+      backgroundColor: "#f7f7f7"
     },
 
     title: {
-      text: 'Tiktok\'s User Age Distribution by Gender'
+      text: "Tiktok's User Age Distribution by Gender",
+      style: { color: "#636363" }
     },
     subtitle: {
-      text: 'Source: App Ape Lab.'
+      text: "Source: App Ape Lab."
     },
-    series: [{
-      type: 'sunburst',
-      data: data,
-      allowDrillToNode: true,
-      cursor: 'pointer',
-      dataLabels: {
-        format: '{point.name}',
-        filter: {
-          property: 'innerArcLength',
-          operator: '>',
-          value: 16
-        }
-      },
-      levels: [{
-        level: 1,
-        levelIsConstant: false,
+    series: [
+      {
+        type: "sunburst",
+        data: data,
+        allowDrillToNode: true,
+        cursor: "pointer",
         dataLabels: {
+          format: "{point.name}",
           filter: {
-            property: 'outerArcLength',
-            operator: '>',
-            value: 64
+            property: "innerArcLength",
+            operator: ">",
+            value: 16
           }
-        }
-      }, {
-        level: 2,
-        colorByPoint: true
-      }]
-
-    }],
+        },
+        levels: [
+          {
+            level: 1,
+            levelIsConstant: false,
+            dataLabels: {
+              filter: {
+                property: "outerArcLength",
+                operator: ">",
+                value: 64
+              }
+            }
+          },
+          {
+            level: 2,
+            colorByPoint: true
+          }
+        ]
+      }
+    ],
     tooltip: {
-      formatter: function () {
+      formatter: function() {
         if (!this.point.parent) {
           // layer 0, center
           return false;
         } else if (this.point.gender) {
           // layer 2, age
-          return this.point.gender + ' aged ' + this.key + ': ' + this.point.value + '%';
+          return (
+            this.point.gender +
+            " aged " +
+            this.key +
+            ": " +
+            this.point.value +
+            "%"
+          );
         } else {
           // layer 1, gender
-          return this.key + ': ' + this.point.value + '%';
+          return this.key + ": " + this.point.value + "%";
         }
       }
     }
   };
 
-  Highcharts.getOptions().colors.splice(0, 0, 'transparent');
-  Highcharts.chart('chart-user-ages-by-gender', config);
+  Highcharts.getOptions().colors.splice(0, 0, "transparent");
+  Highcharts.chart("chart-user-ages-by-gender", config);
 }
 
 function plotMonthlyRatings(data) {
   if (data) {
     let config = {
       chart: {
-        type: 'streamgraph',
+        type: "streamgraph",
         marginBottom: 90,
-        zoomType: 'x',
-        backgroundColor: '#f7f7f7'
+        zoomType: "x",
+        backgroundColor: "#f7f7f7"
       },
 
       colors: [
-        '#00602B', // 5-star
-        '#92D14F', // 4-star
-        '#FEC923', // 3-star
-        '#FA9924', // 2-star
-        '#EA0001', // 1-star
+        "#00602B", // 5-star
+        "#92D14F", // 4-star
+        "#FEC923", // 3-star
+        "#FA9924", // 2-star
+        "#EA0001" // 1-star
       ],
 
       title: {
         floating: true,
-        align: 'center',
-        text: 'TikTok\'s Monthly Ratings on App Store'
+        align: "center",
+        text: "TikTok's Monthly Ratings on App Store",
+        style: { color: "#636363" }
       },
 
       subtitle: {
         floating: true,
-        align: 'center',
+        align: "center",
         y: 30,
-        text: 'Source: AppBot.co'
+        text: "Source: AppBot.co"
       },
 
       xAxis: {
         maxPadding: 0,
         offset: 30,
-        type: 'category',
+        type: "category",
         crosshair: true,
         categories: data.category,
         labels: {
-          align: 'left',
+          align: "left",
           reserveSpace: false,
           rotation: 320
         },
@@ -291,71 +335,74 @@ function plotMonthlyRatings(data) {
 
       legend: {
         enabled: true,
-        align: 'center',
-        verticalAlign: 'top',
+        align: "center",
+        verticalAlign: "top",
         y: 30
       },
-      colors: ['#a2a6d1', '#8dc8ef', '#8b6fd4', '#bd9fc1', '#e5a6b3'],
+      colors: ["#a2a6d1", "#8dc8ef", "#8b6fd4", "#bd9fc1", "#e5a6b3"],
       series: data.series
     };
 
-    Highcharts.chart('chart-monthly-ratings', config);
+    Highcharts.chart("chart-monthly-ratings", config);
   }
 }
 
 function plotNA() {
   let data = [
-    ['us', 1],
-    ['ca', 1],
-    ['mx', 1]
+    ["us", 327.2],
+    ["ca", 39.56],
+    ["mx", 129.2]
   ];
 
   // Create the chart
   let config = {
     chart: {
-      map: 'custom/north-america',
-      backgroundColor: '#f7f7f7'
+      map: "custom/north-america",
+      backgroundColor: "#f7f7f7",
+      height: "87%"
     },
 
     title: {
-      text: ''
+      text: ""
     },
-
-    subtitle: {
-      text:
-        'Source map: <a href="http://code.highcharts.com/mapdata/custom/north-america.js">North America</a>'
+    legend: {
+      enabled: false
     },
-    colors: ['#a2a6d1'],
+    tooltip: {
+      pointFormat: "{point.name}: {point.value} Million"
+    },
+    colors: ["#a2a6d1"],
     series: [
       {
         data: data,
-        name: 'NA',
+        name: "Population",
         states: {
           hover: {
-            color: '#BADA55'
+            color: "#ff5c6e"
           }
         }
       }
     ]
   };
-  Highcharts.chart('chart-na', config);
+  Highcharts.mapChart("chart-na", config);
 }
 
 function plotSearchInterest(data) {
   let config = {
     chart: {
-      type: 'tilemap',
+      type: "tilemap",
       inverted: true,
-      height: '625px',
-      backgroundColor: '#f7f7f7'
+      height: "625px",
+      backgroundColor: "#f7f7f7"
     },
 
     title: {
-      text: 'Google Search Interest Index of Keyword \'TikTok\' by State'
+      text: "Google Search Interest Index of Keyword 'TikTok' by State",
+      style: { color: "#636363" }
     },
 
     subtitle: {
-      text: 'Source: Google Trends'
+      text: "Source: Google Trends"
     },
 
     xAxis: {
@@ -371,47 +418,46 @@ function plotSearchInterest(data) {
         {
           from: 0,
           to: 71,
-          color: '#FDD1B8',
-          name: '0-70'
+          color: "#FDD1B8",
+          name: "0-70"
         },
         {
           from: 71,
           to: 81,
-          color: '#fda2ae',
-          name: '71-80'
+          color: "#fda2ae",
+          name: "71-80"
         },
         {
           from: 81,
           to: 91,
-          color: '#ab73a0',
-          name: '81-90'
+          color: "#ab73a0",
+          name: "81-90"
         },
         {
           from: 91,
           to: 96,
-          color: '#594492',
-          name: '90-95'
+          color: "#594492",
+          name: "90-95"
         },
         {
           from: 96,
-          color: '#352366',
-          name: '96-100'
+          color: "#352366",
+          name: "96-100"
         }
       ]
     },
 
     tooltip: {
-      headerFormat: '',
-      pointFormat:
-        '{point.name}: {point.value}'
+      headerFormat: "",
+      pointFormat: "{point.name}: {point.value}"
     },
 
     plotOptions: {
       series: {
         dataLabels: {
           enabled: true,
-          format: '{point.hc-a2}',
-          color: '#000000',
+          format: "{point.hc-a2}",
+          color: "#000000",
           style: {
             textOutline: false
           }
@@ -421,13 +467,13 @@ function plotSearchInterest(data) {
 
     series: [
       {
-        name: 'Search Interest',
+        name: "Search Interest",
         data: data
       }
     ]
   };
 
-  Highcharts.chart('chart-search-interest', config);
+  Highcharts.chart("chart-search-interest", config);
 }
 
 async function loadJSON(path) {
@@ -437,9 +483,9 @@ async function loadJSON(path) {
 }
 
 function plotStatsCharts() {
-  agPromise = loadJSON('./assets/data/user-ages-by-gender.json');
-  mrPromise = loadJSON('./assets/data/monthly-ratings.json');
-  siPromise = loadJSON('./assets/data/search-interests.json');
+  agPromise = loadJSON("./assets/data/user-ages-by-gender.json");
+  mrPromise = loadJSON("./assets/data/monthly-ratings.json");
+  siPromise = loadJSON("./assets/data/search-interests.json");
 
   plotTotalDownload();
   plotNumUsers();
@@ -448,13 +494,13 @@ function plotStatsCharts() {
   plotUserAgesByGender();
   plotMonthlyRatings();
 
-  agPromise.then(function (data) {
+  agPromise.then(function(data) {
     plotUserAgesByGender(data);
   });
-  mrPromise.then(function (data) {
+  mrPromise.then(function(data) {
     plotMonthlyRatings(data);
   });
-  siPromise.then(function (data) {
+  siPromise.then(function(data) {
     plotSearchInterest(data);
   });
 }
@@ -462,7 +508,7 @@ function plotStatsCharts() {
 function init() {
   plotStatsCharts();
 }
-document.addEventListener('DOMContentLoaded', init, false);
+document.addEventListener("DOMContentLoaded", init, false);
 
 /*
 
