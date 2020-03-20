@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="assets/index.css" />
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/item-series.js"></script>
+    <script src="https://code.highcharts.com/modules/streamgraph.js"></script>
+    <script src="https://code.highcharts.com/modules/heatmap.js"></script>
+    <script src="https://code.highcharts.com/modules/tilemap.js"></script>
+    <script src="https://code.highcharts.com/mapdata/custom/north-america.js"></script>
+    <script type="module" src="./assets/js/stickyNavBar.js"></script>
     <title>Evolution of Tiktok</title>
   </head>
 
@@ -32,13 +38,13 @@
           and <a href="https://yuxuan.fan/" target="_blank">@Yuxuan</a>.
         </p>
       </div>
-      <nav class="nav">
+      <div id="nav">
         <ul>
           <li><a href="#intro">How It Started</a></li>
           <li><a href="#statistics">Growth Statistics</a></li>
           <li><a href="#trending">Trending Videos</a></li>
         </ul>
-      </nav>
+      </div>
       <div class="main">
         <section class="intro" id="intro">
           <div class="startup-story flex-container">
@@ -76,19 +82,65 @@
         <section class="statistics" id="statistics">
           <header class="major"><h2>Growth Statistics</h2></header>
 
-          <header class="major"><h3>Downloads</h3></header>
+          <!-- Number of Downloads -->
+          <header class="major">
+            <h3>How Many People Have Downloaded TikTok?</h3>
+          </header>
           <div class="stats-charts-container">
             <section class="chart-instance" id="chart-total-download"></section>
             <section class="chart-instance" id="chart-num-users"></section>
           </div>
+          <hr />
 
-          <header class="major"><h3>Users</h3></header>
+          <!-- Number of Users -->
+          <header class="major">
+            <h3>How Many Active TikTok's Users Are There?</h3>
+          </header>
+          <div class="stats-charts-container">
+            <section class="chart-instance" id="tiktok-logo">
+              <img src="./images/tiktok-logo.png" style="width: 300px;" />
+              <h3>500M</h3>
+            </section>
+            <section class="chart-instance" id="greater-than-sign">
+              <img src="./images/greater_than.svg.png" style="width: 90px;" />
+            </section>
+            <section class="chart-instance"><div id="chart-na"></div></section>
+            <!--<section
+              class="chart-instance"
+              id="chart-most-freq-words"
+            ></section> 
+            <section class="chart-instance" id="chart-market-shares"></section>-->
+          </div>
+          <hr />
+
+          <!-- User age distribution -->
+          <header class="major"><h3>User Age Distribution</h3></header>
+          <div class="stats-charts-container">
+            <section class="chart-instance" id="chart-user-ages"></section>
+          </div>
+          <hr />
+
+          <!-- Monthly Rating -->
+          <header class="major">
+            <h3>How Is TikTok's rating on App Store?</h3>
+          </header>
           <div class="stats-charts-container">
             <section
               class="chart-instance"
-              id="chart-most-freq-words"
+              id="chart-monthly-ratings"
             ></section>
-            <section class="chart-instance" id="chart-market-shares"></section>
+          </div>
+          <hr />
+
+          <!-- Google Search 'TikTok' by State -->
+          <header class="major">
+            <h3>What state is TikTok Most Popular In?</h3>
+          </header>
+          <div class="stats-charts-container">
+            <section
+              class="chart-instance"
+              id="chart-search-interest"
+            ></section>
           </div>
         </section>
         <section class="trending" id="trending">
