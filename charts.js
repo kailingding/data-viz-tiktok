@@ -16,6 +16,19 @@ function plotTotalDownload() {
 
     xAxis: {
       categories: ["Tiktok", "Facebook", "Instagram", "Youtube", "Snapchat"],
+      labels: {
+        useHTML: true,
+        formatter: function() {
+          console.log(this);
+          return {
+            Tiktok: "<img src='./images/tiktok_logo.png' style='width:35px'>",
+            Facebook: "<img src='./images/facebook.png' style='width:32px'>",
+            Instagram: "<img src='./images/instagram.png' style='width:32px'>",
+            Youtube: "<img src='./images/youtube.png' style='width:32px'>",
+            Snapchat: "<img src='./images/snapchat.png' style='width:32px'>"
+          }[this.value]; //'<img class="" src="http://dummyimage.com/60x60/ff6600/ffffff"/>';
+        }
+      },
       title: {
         text: null
       }
@@ -34,7 +47,6 @@ function plotTotalDownload() {
       valueSuffix: " millions",
       pointFormat: "Downloads: {point.y}"
     },
-
     legend: {
       enabled: false
     },
@@ -127,7 +139,7 @@ function plotNumUsers() {
         label: {
           connectorAllowed: false
         },
-        pointStart: 2010
+        pointStart: 2016
       }
     },
 
@@ -359,7 +371,7 @@ function plotNA() {
     chart: {
       map: "custom/north-america",
       backgroundColor: "#f7f7f7",
-      height: "87%"
+      height: "88%"
     },
 
     title: {

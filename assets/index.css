@@ -329,6 +329,7 @@ section.chart-instance {
 
 #chart-na-desc span {
   font-size: 16px;
+  font-weight: 1000;
 }
 
 .num-users span {
@@ -383,7 +384,7 @@ section.chart-instance {
   .trending-intros .content {
     width: 100%;
   }
-  
+
   .trending-intros .image {
     width: 100%;
     padding-right: 0%;
