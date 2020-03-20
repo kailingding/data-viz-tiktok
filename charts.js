@@ -6,6 +6,10 @@ const chartMarketShares = document.querySelector("#chart-market-shares");
 function plotTotalDownload(region) {
   let data = [];
   let config = {
+    chart: {
+      backgroundColor: '#f7f7f7'
+    },
+
     title: {
       text: "Total Downloads"
     },
@@ -67,6 +71,10 @@ function plotTotalDownload(region) {
 function plotNumUsers(region) {
   let data = [];
   let config = {
+    chart: {
+      backgroundColor: '#f7f7f7'
+    },
+
     title: {
       text: "Total Users"
     },
@@ -129,7 +137,8 @@ function plotMostFreqWords(region) {
   let data = [];
   let config = {
     chart: {
-      type: "packedbubble"
+      type: "packedbubble",
+      backgroundColor: '#f7f7f7'
     },
     title: {
       text: "The Most Frequent Keywords"
@@ -203,6 +212,7 @@ function plotMarketShares(region) {
       plotBackgroundColor: null,
       plotBorderWidth: null,
       plotShadow: false,
+      backgroundColor: '#f7f7f7',
       type: "pie"
     },
     title: {
@@ -268,6 +278,6 @@ function plotStatsCharts(region) {
 }
 
 function init() {
-  plotStatsCharts("default");
+  plotStatsCharts("ww");
 }
 document.addEventListener("DOMContentLoaded", init, false);
