@@ -19,7 +19,6 @@ function plotTotalDownload() {
       labels: {
         useHTML: true,
         formatter: function() {
-          console.log(this);
           return {
             Tiktok: "<img src='./images/tiktok_logo.png' style='width:35px'>",
             Facebook: "<img src='./images/facebook.png' style='width:32px'>",
